@@ -1,5 +1,6 @@
 using DG.Tweening;
 using Mono.Cecil;
+using System;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -7,6 +8,7 @@ public class PlayerController : MonoBehaviour
     SpriteRenderer sprite;
     Rigidbody2D rigibody;
 
+    [SerializeField] SpearGun spearGun;
     [SerializeField] float verticalVelocity = 2;
     [SerializeField] float horizontalVelocity = 2;
     [SerializeField] float maxTilt = 30;
@@ -16,6 +18,16 @@ public class PlayerController : MonoBehaviour
 
     Vector2 velocityDrv;
     Vector2 currentVelocity;
+
+    float targetSpearGunRotation;
+    void UpdateSpearGunRotation()
+    {
+        var dif = (Input.mousePosition - spearGun.transform.position);
+        targetSpearGunRotation = Mathf.Atan2(dif.y,dif.x) * Mathf.Rad2Deg;
+        var eu = spearGun.transform.localEulerAngles;
+        eu.z = targetSpearGunRotation;
+        spearGun.transform.localEulerAngles = eu;   
+    }
 
     void UpdateMovement()
     {
@@ -61,6 +73,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         UpdateMovement();
+        UpdateSpearGunRotation(); 
     }
     #endregion
 }
