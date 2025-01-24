@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &196833776 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2723228741940145343, guid: 9497d351bbdf4014f82aabd949d60ce9, type: 3}
+  m_PrefabInstance: {fileID: 8345471416234209651}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1318803228
 GameObject:
   m_ObjectHideFlags: 0
@@ -256,6 +261,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1960224909 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2077019008531238233, guid: 4d651fc33316cb4489230fa1be184744, type: 3}
+  m_PrefabInstance: {fileID: 4287420548893870793}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4287420548893870793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -310,9 +320,69 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2077019008531238233, guid: 4d651fc33316cb4489230fa1be184744, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 196833776}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d651fc33316cb4489230fa1be184744, type: 3}
+--- !u!1001 &8345471416234209651
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1960224909}
+    m_Modifications:
+    - target: {fileID: 2723228741940145343, guid: 9497d351bbdf4014f82aabd949d60ce9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.226
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723228741940145343, guid: 9497d351bbdf4014f82aabd949d60ce9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723228741940145343, guid: 9497d351bbdf4014f82aabd949d60ce9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723228741940145343, guid: 9497d351bbdf4014f82aabd949d60ce9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723228741940145343, guid: 9497d351bbdf4014f82aabd949d60ce9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723228741940145343, guid: 9497d351bbdf4014f82aabd949d60ce9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723228741940145343, guid: 9497d351bbdf4014f82aabd949d60ce9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723228741940145343, guid: 9497d351bbdf4014f82aabd949d60ce9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723228741940145343, guid: 9497d351bbdf4014f82aabd949d60ce9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2723228741940145343, guid: 9497d351bbdf4014f82aabd949d60ce9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7722709400073325201, guid: 9497d351bbdf4014f82aabd949d60ce9, type: 3}
+      propertyPath: m_Name
+      value: Spear Gun
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 9497d351bbdf4014f82aabd949d60ce9, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
