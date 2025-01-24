@@ -26,7 +26,7 @@ public class DialogueManager : MonoBehaviour
         {
             currentLine++;
 
-            if (currentLine == conversation.Count)
+            if (currentLine >= conversation.Count)
             {
                 textBox.SetActive(false);
             }
@@ -41,6 +41,8 @@ public class DialogueManager : MonoBehaviour
     {
         if (collision != null)
         {
+            currentLine = 0;
+
             textBox.SetActive(true);
             Debug.Log("Dialgoue in progress");
 
