@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
 
     void UpdateMovement()
     {
+        bool sprinting = Input.GetKey(KeyCode.LeftShift);
+
         var input = Vector2.zero;
         if (Input.GetKey(KeyCode.W))
             input += new Vector2(0, 1);
@@ -38,7 +40,7 @@ public class PlayerController : MonoBehaviour
             input += new Vector2(1, 0);
             flipped = true;
         }
-        var targetVelocity = Vector2.Scale(input, new Vector2(horizontalVelocity, verticalVelocity));
+        var targetVelocity = Vector2.Scale(input, new Vector2(sprinting ? horizontalVelocity * 2 : horizontalVelocity, verticalVelocity));
         currentVelocity = Vector2.SmoothDamp(currentVelocity, targetVelocity, ref velocityDrv, .2f);
         rigibody.linearVelocity = currentVelocity;
 
