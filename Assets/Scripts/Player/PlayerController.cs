@@ -20,10 +20,11 @@ public class PlayerController : MonoBehaviour
     Vector2 currentVelocity;
 
     float targetSpearGunRotation;
+    float targetRotation;
     void UpdateSpearGunRotation()
     {
-        var dif = (Input.mousePosition - spearGun.transform.position);
-        targetSpearGunRotation = Mathf.Atan2(dif.y,dif.x) * Mathf.Rad2Deg;
+        var dif = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - spearGun.transform.position);
+        targetSpearGunRotation = (flipped ? (Mathf.Atan2(dif.y, dif.x) * Mathf.Rad2Deg + 180) : (-Mathf.Atan2(dif.y, dif.x) * Mathf.Rad2Deg )); 
         var eu = spearGun.transform.localEulerAngles;
         eu.z = targetSpearGunRotation;
         spearGun.transform.localEulerAngles = eu;   
@@ -66,7 +67,7 @@ public class PlayerController : MonoBehaviour
     {
         sprite = GetComponent<SpriteRenderer>();
         rigibody = GetComponent<Rigidbody2D>();
-        flipped = false;
+        flipped = true;
         scaleX = transform.localScale.x;
     }
 
