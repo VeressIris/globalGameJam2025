@@ -15,16 +15,25 @@ public class DialogueManager : MonoBehaviour
         textBox = GameObject.Find("TextBox");
         characterNameTMP = GameObject.Find("Name").GetComponent<TMP_Text>();
         textTMP = GameObject.Find("Lines").GetComponent<TMP_Text>();
+     
         textBox.SetActive(false);
     }
 
     void Update()
     {
-        // go to next line
-        if (Input.GetKeyDown(KeyCode.Space) && currentLine < conversation.Count)
+        // progress through conversation
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             currentLine++;
-            UpdateTextBox();
+
+            if (currentLine == conversation.Count)
+            {
+                textBox.SetActive(false);
+            }
+            else
+            {
+                UpdateTextBox();
+            }
         }
     }
 

@@ -698,6 +698,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[0].line
+      value: al;kdfjaw;lf
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[1].line
+      value: dkajlwfhekajfhiw
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[0].characterName
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[1].characterName
+      value: Player 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6652677392059805956, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
       propertyPath: m_Name
       value: MemoryBubble
