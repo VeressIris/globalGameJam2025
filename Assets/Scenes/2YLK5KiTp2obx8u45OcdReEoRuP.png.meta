@@ -145,6 +145,45 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -447,7 +486,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      2YLK5KiTp2obx8u45OcdReEoRuP_0: 1759300789106771712
+      2YLK5KiTp2obx8u45OcdReEoRuP_1: 2544315786192113086
+      2YLK5KiTp2obx8u45OcdReEoRuP_10: 5902564160435993022
+      2YLK5KiTp2obx8u45OcdReEoRuP_11: -5531361433258972149
+      2YLK5KiTp2obx8u45OcdReEoRuP_12: -9170259437607358932
+      2YLK5KiTp2obx8u45OcdReEoRuP_2: -6091623180168942846
+      2YLK5KiTp2obx8u45OcdReEoRuP_3: 859051931104026721
+      2YLK5KiTp2obx8u45OcdReEoRuP_4: -7495952730854622777
+      2YLK5KiTp2obx8u45OcdReEoRuP_5: -4348180963837991392
+      2YLK5KiTp2obx8u45OcdReEoRuP_6: -7960359233972487249
+      2YLK5KiTp2obx8u45OcdReEoRuP_7: 2275667989933692062
+      2YLK5KiTp2obx8u45OcdReEoRuP_8: 7002896616830114059
+      2YLK5KiTp2obx8u45OcdReEoRuP_9: -2923594019091694806
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

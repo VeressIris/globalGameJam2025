@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System.Collections;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -10,12 +11,20 @@ public class DialogueManager : MonoBehaviour
     private TMP_Text textTMP;
     private int currentLine = 0;
 
-    void Start()
+    [SerializeField] private float delay = 0.15f;
+    private bool typing = false;
+
+    void Awake()
     {
         textBox = GameObject.Find("TextBox");
         characterNameTMP = GameObject.Find("Name").GetComponent<TMP_Text>();
         textTMP = GameObject.Find("Lines").GetComponent<TMP_Text>();
-     
+    }
+
+    void Start()
+    {
+        // make sure text box is clear
+        textTMP.text = "";
         textBox.SetActive(false);
     }
 
@@ -24,15 +33,27 @@ public class DialogueManager : MonoBehaviour
         // progress through conversation
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            currentLine++;
-
+            if (!typing)
+            {
+                currentLine++;
+            }
+            
             if (currentLine >= conversation.Count)
             {
                 textBox.SetActive(false);
             }
             else
             {
-                UpdateTextBox();
+                if (!typing)
+                {
+                    StartCoroutine(UpdateTextBox());
+                }
+                else
+                {
+                    typing = false;
+                    StopAllCoroutines();
+                    textTMP.text = conversation[currentLine].line;
+                }
             }
         }
     }
@@ -44,15 +65,25 @@ public class DialogueManager : MonoBehaviour
             currentLine = 0;
 
             textBox.SetActive(true);
-            Debug.Log("Dialgoue in progress");
 
-            UpdateTextBox();
+            StartCoroutine(UpdateTextBox());
         }
     }
 
-    private void UpdateTextBox()
+    private IEnumerator UpdateTextBox()
     {
-        textTMP.text = conversation[currentLine].line;
+        typing = true;
+
+        textTMP.text = ""; // clear text box
         characterNameTMP.text = conversation[currentLine].characterName;
+        
+        // display text character by char
+        foreach (char chr in conversation[currentLine].line)
+        {
+            textTMP.text += chr;
+            yield return new WaitForSeconds(delay); // wait before displaying next char
+        }
+        
+        typing = false;
     }
 }

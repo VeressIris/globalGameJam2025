@@ -145,6 +145,45 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -447,7 +486,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      blood-removebg-preview_0: -3756039920635620068
+      blood-removebg-preview_1: 5734789812388383889
+      blood-removebg-preview_10: 7360747880348426785
+      blood-removebg-preview_11: -6197757304728250702
+      blood-removebg-preview_12: -3886820145657233428
+      blood-removebg-preview_2: -4899035416951676076
+      blood-removebg-preview_3: -1381464656479036137
+      blood-removebg-preview_4: -1641730615257349961
+      blood-removebg-preview_5: 5007412439507360995
+      blood-removebg-preview_6: -4015776288985528879
+      blood-removebg-preview_7: -1806393421727130230
+      blood-removebg-preview_8: -6908375239269954315
+      blood-removebg-preview_9: 8441068384532857230
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
