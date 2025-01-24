@@ -67,7 +67,7 @@ public class PlayerController : MonoBehaviour
     {
         sprite = GetComponent<SpriteRenderer>();
         rigibody = GetComponent<Rigidbody2D>();
-        flipped = false;
+        flipped = true;
         scaleX = transform.localScale.x;
     }
 
