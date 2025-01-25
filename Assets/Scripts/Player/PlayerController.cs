@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     SpriteRenderer sprite;
     Rigidbody2D rigibody;
+    Animator animator;
 
     [SerializeField] SpearGun spearGun;
     [SerializeField] float verticalVelocity = 2;
@@ -15,6 +16,9 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField] float middleTiltAngle = -30;
     [SerializeField] float maxTiltAngle = 30;
+    [Header("Animation")]
+    [SerializeField] float animationSpeedCoef = 1;
+    [SerializeField] float minAnimSwimmingSpeed = .1f;
 
     bool flipped;
     float scaleX;
@@ -24,6 +28,13 @@ public class PlayerController : MonoBehaviour
 
     float targetSpearGunRotation;
     float targetRotation;
+
+    void UpdateAnimations()
+    {
+        animator.SetFloat("SwimmingSpeed", Mathf.Max(Mathf.Abs(currentVelocity.x * animationSpeedCoef), minAnimSwimmingSpeed));
+    }
+
+
     void UpdateSpearGunRotation()
     {
         var dif = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - spearGun.transform.position);
@@ -50,14 +61,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             transform.DOKill();
-            transform.DOScaleX(-scaleX,.4f);
+            transform.DOScaleX(-scaleX,.6f);
             input += new Vector2(-1, 0);
             flipped = false;
         }
         if (Input.GetKey(KeyCode.D))
         {
             transform.DOKill();
-            transform.DOScaleX(scaleX, .4f);
+            transform.DOScaleX(scaleX, .6f);
             input += new Vector2(1, 0);
             flipped = true;
         }
@@ -75,6 +86,7 @@ public class PlayerController : MonoBehaviour
     {
         sprite = GetComponent<SpriteRenderer>();
         rigibody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         flipped = true;
         scaleX = transform.localScale.x;
     }
@@ -82,7 +94,8 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         UpdateMovement();
-        UpdateSpearGunRotation(); 
+        UpdateSpearGunRotation();
+        UpdateAnimations();
     }
     #endregion
 }
