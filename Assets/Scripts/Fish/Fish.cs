@@ -1,3 +1,4 @@
+using DG.Tweening;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -9,11 +10,13 @@ public class Fish : MonoBehaviour
     [SerializeField] private float moveSpeed = 1.5f;
     private SpriteRenderer sr;
     private bool moving = false;
+    private bool flipped = false;
 
     [Header("Spawning/moving properties")]
     private Vector2 topLeftCornerLimit;
     private Vector2 bottomRightCornerLimit;
     private Vector2 target;
+    private float scaleX;
 
     void Awake()
     {
@@ -24,6 +27,7 @@ public class Fish : MonoBehaviour
     {
         SetLimits();
         transform.position = NewPosition();
+        scaleX = transform.localScale.x;
     }
 
     void Update()
@@ -67,7 +71,19 @@ public class Fish : MonoBehaviour
     private void Flip()
     {
         Vector2 direction = target - (Vector2)transform.position;
-        sr.flipX = direction.x < 0;
+
+        if (direction.x > 0)
+        {
+            transform.DOKill();
+            transform.DOScale(scaleX, 0.3f);
+            flipped = true;
+        }
+        else if (direction.x < 0)
+        {
+            transform.DOKill();
+            transform.DOScale(-scaleX, 0.3f);
+            flipped = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
