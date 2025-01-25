@@ -119,11 +119,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &1108446002 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3734100431810369119, guid: 4d651fc33316cb4489230fa1be184744, type: 3}
-  m_PrefabInstance: {fileID: 4709872385151714650}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1318803228
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,18 +304,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3007424191007777499, guid: 4d651fc33316cb4489230fa1be184744, type: 3}
-      propertyPath: displaySpear
-      value: 
-      objectReference: {fileID: 1108446002}
+    - target: {fileID: 3734100431810369119, guid: 4d651fc33316cb4489230fa1be184744, type: 3}
+      propertyPath: m_Name
+      value: Display Spear
+      objectReference: {fileID: 0}
     - target: {fileID: 7891599708877216744, guid: 4d651fc33316cb4489230fa1be184744, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8841558904744259095, guid: 4d651fc33316cb4489230fa1be184744, type: 3}
-    - {fileID: 300599317001078790, guid: 4d651fc33316cb4489230fa1be184744, type: 3}
-    - {fileID: 4902958988427872037, guid: 4d651fc33316cb4489230fa1be184744, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
