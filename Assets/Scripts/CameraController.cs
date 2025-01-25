@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [SerializeField] Transform player;
+    Transform player;
     Vector3 targetPos;
     Vector3 posDerv;
     
     void Start()
     {
-        
+        player = FindAnyObjectByType<PlayerController>().transform;
     }
     void Update()
     {
