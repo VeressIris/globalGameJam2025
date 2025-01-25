@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
     Transform player;
     Vector3 targetPos;
     Vector3 posDerv;
-    
+
     void Start()
     {
         player = FindAnyObjectByType<PlayerController>().transform;

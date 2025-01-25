@@ -845,9 +845,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7426312182842698136, guid: 2f15fff30cfd89f4180d143fa87b8c73, type: 3}
-  m_Color: {r: 0.36503384, g: 0.6301887, b: 0.60328895, a: 1}
+  m_Color: {r: 0.20784314, g: 0.29433227, b: 0.42745098, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -869,6 +869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30b99dbb8e0fc7f4f80df2c8b01b2a03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fishPosition: {fileID: 3586399676626064523}
 --- !u!50 &2785322804349714832
 Rigidbody2D:
   serializedVersion: 5
@@ -1493,14 +1494,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e26e3d1828c9f4543a9a20d90d5e371d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  money: 100
+  oxygen: 0
+  oxygenCapacitySeconds: 30
   spearGun: {fileID: 6828154823916451158}
-  verticalVelocity: 2
+  verticalVelocity: 4
   horizontalVelocity: 6
   maxTilt: 10
-  middleTiltAngle: -30
-  maxTiltAngle: 30
   animationSpeedCoef: 0.15
   minAnimSwimmingSpeed: 0.2
+  surfaceHeight: 34
+  maxDepth: -32
 --- !u!50 &1229352522125050030
 Rigidbody2D:
   serializedVersion: 5

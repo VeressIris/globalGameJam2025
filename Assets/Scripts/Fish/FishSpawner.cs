@@ -1,45 +1,39 @@
-using System.Collections.Generic;
 using UnityEngine;
 
 public class FishSpawner : MonoBehaviour
 {
-    [SerializeField] private GameObject fishPrefab;
-    [SerializeField] private int maxNumOfFish;
-    private GameObject player;
-    private List<GameObject> fishList = new List<GameObject>();
+    public bool isPlayerInRadius;
+
+    [SerializeField] GameObject fishPrefab;
+    [SerializeField] public float radius;
+    [SerializeField] float playerExlusionRadius;
+    [SerializeField] int fishCount;
+    PlayerController player;
+
+    public Vector3 RandomPointInCircle()
+    {
+        var angle = Random.Range(0, Mathf.PI * 2);
+        return transform.position + new Vector3(Mathf.Cos(angle), Mathf.Sign(angle), 0) * radius * Random.value;
+    }
 
     void Start()
     {
-        player = GameObject.Find("Player");    
+        player = FindAnyObjectByType<PlayerController>();
     }
 
     void Update()
     {
-        float dist = Vector2.Distance(player.transform.position, transform.position);
-        // Might be able to work around this by using collider triggers instead, but then i'd have to rethink the fish script a bit too
-        if (dist < 6.5f)
+        isPlayerInRadius = (player.transform.position - transform.position).magnitude > playerExlusionRadius;
+        if (isPlayerInRadius && transform.childCount < fishCount)
         {
-            if (fishList.Count < maxNumOfFish / 2)
-            {
-                SpawnFish(maxNumOfFish - fishList.Count);
-            }
-        }
-        else if (dist > 20)
-        {
-            // remove all fish
-            foreach (GameObject fish in fishList)
-            {
-                Destroy(fish);
-            }
-            fishList.Clear();
+            var clone = Instantiate(fishPrefab, transform);
+            clone.GetComponent<Fish>().fishSpawner = this;
+            clone.transform.rotation = Quaternion.identity;
         }
     }
-
-    private void SpawnFish(int numberOfFish)
-    { 
-        for (int i = 0; i < numberOfFish; i++)
-        {
-            fishList.Add(Instantiate(fishPrefab));
-        }
+    void OnDrawGizmos()
+    {
+        Gizmos.DrawWireSphere(transform.position, radius);
+        Gizmos.DrawWireSphere(transform.position, playerExlusionRadius);
     }
 }
