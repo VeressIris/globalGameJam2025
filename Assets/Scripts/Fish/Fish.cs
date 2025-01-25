@@ -63,8 +63,9 @@ public class Fish : MonoBehaviour
     // Set limits based on rarity
     private void SetLimits()
     {
-        topLeftCornerLimit = new Vector2(-15f, 0f);
+        topLeftCornerLimit = new Vector2(-15f, 0f - 10 * rarity - 3);
         bottomRightCornerLimit = new Vector2(15f, -10 * (rarity + 1));
+        Debug.Log(name + '\n' + topLeftCornerLimit + '\n' + bottomRightCornerLimit);
     }
 
     // Flip horizontally to face target
@@ -75,13 +76,13 @@ public class Fish : MonoBehaviour
         if (direction.x > 0)
         {
             transform.DOKill();
-            transform.DOScale(scaleX, 0.3f);
+            transform.DOScaleX(scaleX, 0.3f);
             flipped = true;
         }
         else if (direction.x < 0)
         {
             transform.DOKill();
-            transform.DOScale(-scaleX, 0.3f);
+            transform.DOScaleX(-scaleX, 0.3f);
             flipped = false;
         }
     }
