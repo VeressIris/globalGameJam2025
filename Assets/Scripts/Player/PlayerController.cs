@@ -13,6 +13,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float horizontalVelocity = 2;
     [SerializeField] float maxTilt = 30;
 
+    [SerializeField] float middleTiltAngle = -30;
+    [SerializeField] float maxTiltAngle = 30;
+
     bool flipped;
     float scaleX;
 
@@ -33,6 +36,11 @@ public class PlayerController : MonoBehaviour
     void UpdateMovement()
     {
         bool sprinting = Input.GetKey(KeyCode.LeftShift);
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            spearGun.Fire();
+        }
 
         var input = Vector2.zero;
         if (Input.GetKey(KeyCode.W))
