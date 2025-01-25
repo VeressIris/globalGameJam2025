@@ -66,6 +66,11 @@ public class DialogueManager : MonoBehaviour
                 }
                 else
                 {
+                    if (conversation[currentLine].hasAudio)
+                    {
+                        PlaySFX();
+                    }
+
                     typewriterCoroutine = StartCoroutine(UpdateTextBox());
                 }
             }
@@ -83,8 +88,14 @@ public class DialogueManager : MonoBehaviour
             StartCoroutine(UpdateTextBox());
         }
     }
+
     public IEnumerator UpdateTextBox()
     {
+        if (conversation[currentLine].hasAudio)
+        {
+            PlaySFX();
+        }
+
         typing = true;
 
         textTMP.text = ""; // Clear text box
@@ -100,5 +111,12 @@ public class DialogueManager : MonoBehaviour
         }
 
         typing = false;
+    }
+
+    private void PlaySFX()
+    {
+        AudioSource audioSrc = this.gameObject.GetComponent<AudioSource>();
+        audioSrc.clip = conversation[currentLine].clip;
+        audioSrc.Play();
     }
 }
