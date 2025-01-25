@@ -5,14 +5,19 @@ using System.Collections;
 
 public class DialogueManager : MonoBehaviour
 {
-    [SerializeField] private List<ConversationLineClass> conversation = new List<ConversationLineClass>();
-    private GameObject textBox;
+    public List<ConversationLineClass> conversation = new List<ConversationLineClass>();
+    [HideInInspector] public GameObject textBox;
     private TMP_Text characterNameTMP;
     private TMP_Text textTMP;
-    private int currentLine = 0;
+    [HideInInspector] public int currentLine = 0;
 
     [SerializeField] private float delay = 0.15f;
+    private Coroutine typewriterCoroutine; // Reference to the running coroutine
     private bool typing = false;
+    [SerializeField] private bool usedElsewhere = false;
+
+    // Event to notify when the dialogue ends
+    public event System.Action OnDialogueEnd;
 
     void Awake()
     {
@@ -23,36 +28,45 @@ public class DialogueManager : MonoBehaviour
 
     void Start()
     {
-        // make sure text box is clear
+        // make sure text box is clear at the start
         textTMP.text = "";
-        textBox.SetActive(false);
+
+        if (!usedElsewhere) textBox.SetActive(false);
     }
 
     void Update()
     {
-        // progress through conversation
+        // Handle skipping typewriter effect or progressing the dialogue
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (!typing)
+            if (typing)
             {
-                currentLine++;
-            }
-            
-            if (currentLine >= conversation.Count)
-            {
-                textBox.SetActive(false);
+                typing = false;
+
+                // Safeguard against null coroutine
+                if (typewriterCoroutine != null)
+                {
+                    StopCoroutine(typewriterCoroutine);
+                    typewriterCoroutine = null; // Clear the reference
+                }
+
+                textTMP.text = conversation[currentLine].line;
             }
             else
             {
-                if (!typing)
+                // Move to the next line
+                currentLine++;
+
+                if (currentLine >= conversation.Count)
                 {
-                    StartCoroutine(UpdateTextBox());
+                    textBox.SetActive(false);
+
+                    // Trigger the event when dialogue ends
+                    OnDialogueEnd?.Invoke();
                 }
                 else
                 {
-                    typing = false;
-                    StopAllCoroutines();
-                    textTMP.text = conversation[currentLine].line;
+                    typewriterCoroutine = StartCoroutine(UpdateTextBox());
                 }
             }
         }
@@ -69,21 +83,23 @@ public class DialogueManager : MonoBehaviour
             StartCoroutine(UpdateTextBox());
         }
     }
-
-    private IEnumerator UpdateTextBox()
+    public IEnumerator UpdateTextBox()
     {
         typing = true;
 
-        textTMP.text = ""; // clear text box
+        textTMP.text = ""; // Clear text box
         characterNameTMP.text = conversation[currentLine].characterName;
-        
-        // display text character by char
+
+        // Type out the line character by character
         foreach (char chr in conversation[currentLine].line)
         {
             textTMP.text += chr;
-            yield return new WaitForSeconds(delay); // wait before displaying next char
+            yield return new WaitForSeconds(delay); // Wait before displaying the next character
+
+            // Break out early if skipping
+            if (!typing) yield break;
         }
-        
+
         typing = false;
     }
 }
