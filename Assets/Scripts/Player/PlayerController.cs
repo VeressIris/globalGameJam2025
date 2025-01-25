@@ -38,7 +38,7 @@ public class PlayerController : MonoBehaviour
     void UpdateSpearGunRotation()
     {
         var dif = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - spearGun.transform.position);
-        targetSpearGunRotation = (flipped ? (Mathf.Atan2(dif.y, dif.x) * Mathf.Rad2Deg ) : (-Mathf.Atan2(dif.y, dif.x) * Mathf.Rad2Deg )); 
+        targetSpearGunRotation = (flipped ? (Mathf.Atan2(dif.y, dif.x) * Mathf.Rad2Deg ) : (180-Mathf.Atan2(dif.y, dif.x) * Mathf.Rad2Deg )); 
         var eu = spearGun.transform.localEulerAngles;
         eu.z = targetSpearGunRotation;
         spearGun.transform.localEulerAngles = eu;   

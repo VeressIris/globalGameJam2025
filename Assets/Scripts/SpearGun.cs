@@ -17,6 +17,7 @@ public class SpearGun : MonoBehaviour
         nextTimeFiring = Time.time + firingDelay;
         nextTimeReload = Time.time + reloadDelay;
         var clone = Instantiate(bullet);
+        clone.GetComponent<Rigidbody2D>().linearVelocity += GetComponentInParent<Rigidbody2D>().linearVelocity;
         clone.transform.position = firingPoint.position;
         clone.transform.localScale = displaySpear.transform.lossyScale;
         var dif = Camera.main.ScreenToWorldPoint(Input.mousePosition) - clone.transform.position;
