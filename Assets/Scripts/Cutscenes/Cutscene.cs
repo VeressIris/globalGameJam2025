@@ -51,7 +51,7 @@ public class Cutscene : MonoBehaviour
         if (currentSceneIndex >= scenes.Count)
         {
             // load next unity scene
-            Debug.Log("load next unity scene");
+            SceneManager.LoadScene(destinationSceneIndex);
             return;
         }
 
@@ -81,7 +81,8 @@ public class Cutscene : MonoBehaviour
     private void EndDialogue()
     {
         talking = false;
-        GoToScene(++currentSceneIndex);
+        currentSceneIndex++;
+        GoToScene(currentSceneIndex);
     }
 
     void OnDestroy()

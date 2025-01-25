@@ -90,11 +90,10 @@ public class DialogueManager : MonoBehaviour
         textTMP.text = ""; // Clear text box
         characterNameTMP.text = conversation[currentLine].characterName;
 
-        // Type out the line character by character
         foreach (char chr in conversation[currentLine].line)
         {
             textTMP.text += chr;
-            yield return new WaitForSeconds(delay); // Wait before displaying the next character
+            yield return new WaitForSeconds(delay);
 
             // Break out early if skipping
             if (!typing) yield break;
