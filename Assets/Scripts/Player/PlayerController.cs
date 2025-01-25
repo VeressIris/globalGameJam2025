@@ -61,14 +61,14 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             transform.DOKill();
-            transform.DOScaleX(-scaleX,.6f);
+            transform.DOScaleX(-scaleX,.3f);
             input += new Vector2(-1, 0);
             flipped = false;
         }
         if (Input.GetKey(KeyCode.D))
         {
             transform.DOKill();
-            transform.DOScaleX(scaleX, .6f);
+            transform.DOScaleX(scaleX, .3f);
             input += new Vector2(1, 0);
             flipped = true;
         }
