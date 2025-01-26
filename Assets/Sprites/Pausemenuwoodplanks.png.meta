@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Pausemenuwoodplanks_0: -1150062164897544665
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

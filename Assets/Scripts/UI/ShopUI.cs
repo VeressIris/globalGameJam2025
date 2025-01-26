@@ -59,7 +59,7 @@ public class ShopUI : MonoBehaviour
                 }
                 else if (but.name == "Dynamite")
                 {
-                    price = 100;
+                    price = 150;
                 }
 
                 if (price > player.money)
