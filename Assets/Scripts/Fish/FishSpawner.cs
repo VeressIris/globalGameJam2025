@@ -33,6 +33,10 @@ public class FishSpawner : MonoBehaviour
             var clone = Instantiate(fishPrefab, transform);
             clone.GetComponent<Fish>().fishSpawner = this;
             clone.transform.rotation = Quaternion.identity;
+            var image = clone.GetComponent<SpriteRenderer>();
+            var color = Color.HSVToRGB(Random.value, .0f, Random.Range(.8f,1));
+            image.color = color;
+            clone.transform.localScale *= Random.Range(1, 1.5f);
         }
     }
     void OnDrawGizmos()
