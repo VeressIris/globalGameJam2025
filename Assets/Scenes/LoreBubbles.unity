@@ -336,111 +336,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30f01add198df84418521c13951ef1a0, type: 3}
---- !u!1001 &757395735
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 407801985594600222, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 407801985594600222, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 407801985594600222, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.807118
-      objectReference: {fileID: 0}
-    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.49771452
-      objectReference: {fileID: 0}
-    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: delay
-      value: 0.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: hasCharacter
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: characterSprite
-      value: 
-      objectReference: {fileID: 1453516250179454189, guid: f9d99150426f466459efd5541df78970, type: 3}
-    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: conversation.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: conversation.Array.data[0].line
-      value: " They say the water remembers. It holds echoes of those who dared to
-        know it too well, those who swore they understood its pull\u2014until it
-        was too late. "
-      objectReference: {fileID: 0}
-    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: conversation.Array.data[1].line
-      value: ' I was a diver, a man of the deep, the kind who trusted nothing and
-        no one but the weight of my own breath and the rope tethering me to the world
-        above. I knew the water. Knew its moods, its secrets, its lies. '
-      objectReference: {fileID: 0}
-    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: conversation.Array.data[0].characterName
-      value: Jay Revenez
-      objectReference: {fileID: 0}
-    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: conversation.Array.data[1].characterName
-      value: Jay Revenez
-      objectReference: {fileID: 0}
-    - target: {fileID: 6652677392059805956, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
-      propertyPath: m_Name
-      value: MemoryBubble
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
 --- !u!1001 &800961108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -631,6 +526,63 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8641026430979758582, guid: b202f42c8c7cdb340ab3df4f28564efd, type: 3}
   m_PrefabInstance: {fileID: 5490118860965315080}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4119718832838727857
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4487794457400361705, guid: 76fea8ff6a8dbda41b35a88fde54d49d, type: 3}
+      propertyPath: m_Name
+      value: Jay bubble
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324268004466926859, guid: 76fea8ff6a8dbda41b35a88fde54d49d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.807118
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324268004466926859, guid: 76fea8ff6a8dbda41b35a88fde54d49d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.49771452
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324268004466926859, guid: 76fea8ff6a8dbda41b35a88fde54d49d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324268004466926859, guid: 76fea8ff6a8dbda41b35a88fde54d49d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324268004466926859, guid: 76fea8ff6a8dbda41b35a88fde54d49d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324268004466926859, guid: 76fea8ff6a8dbda41b35a88fde54d49d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324268004466926859, guid: 76fea8ff6a8dbda41b35a88fde54d49d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324268004466926859, guid: 76fea8ff6a8dbda41b35a88fde54d49d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324268004466926859, guid: 76fea8ff6a8dbda41b35a88fde54d49d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8324268004466926859, guid: 76fea8ff6a8dbda41b35a88fde54d49d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 76fea8ff6a8dbda41b35a88fde54d49d, type: 3}
 --- !u!1001 &5490118860965315080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -736,4 +688,4 @@ SceneRoots:
   - {fileID: 596201710}
   - {fileID: 101537056}
   - {fileID: 1912887830}
-  - {fileID: 757395735}
+  - {fileID: 4119718832838727857}

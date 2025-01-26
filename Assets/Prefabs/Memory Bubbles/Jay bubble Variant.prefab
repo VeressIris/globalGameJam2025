@@ -1,0 +1,136 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7067510793900651501
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 407801985594600222, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407801985594600222, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 407801985594600222, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.807118
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.49771452
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: delay
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: hasCharacter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: characterSprite
+      value: 
+      objectReference: {fileID: 1453516250179454189, guid: f9d99150426f466459efd5541df78970, type: 3}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[0].line
+      value: " They say the water remembers. It holds echoes of those who dared to
+        know it too well, those who swore they understood its pull\u2014until it
+        was too late. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[1].line
+      value: ' I was a diver, a man of the deep, the kind who trusted nothing and
+        no one but the weight of my own breath and the rope tethering me to the world
+        above. I knew the water. Knew its moods, its secrets, its lies. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[2].line
+      value: ' And yet, the water took me away.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[3].line
+      value: " No one knows exactly how it happened. Some say my gear failed, but
+        in reality I heard the whisper and I went deeper than any man should, it
+        was like something(red text) down there called me, and I tried to answer.
+        I didn\u2019t manage to reach it , and neither the surface , well\u2026 at
+        least alive. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[4].line
+      value: " So if you go in, remember my story , remember Jay Revenez. And for
+        your own sake\u2014don\u2019t go too deep , even if you hear it calling you."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[0].characterName
+      value: Jay Revenez
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[1].characterName
+      value: Jay Revenez
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[2].characterName
+      value: Jay Revenez
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[3].characterName
+      value: Jay Revenez
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[4].characterName
+      value: Jay Revenez
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652677392059805956, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_Name
+      value: Jay bubble Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
