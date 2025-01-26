@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 101537055}
   - component: {fileID: 101537054}
   - component: {fileID: 101537053}
+  - component: {fileID: 101537057}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -222,6 +223,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &101537057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 101537052}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 874c3dd50fbc27843ba083b729d3feb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textBox: {fileID: 0}
+  characterImage: {fileID: 597257328}
+  characterNameTMP: {fileID: 5768611992795980313}
+  textTMP: {fileID: 0}
 --- !u!1001 &145935643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -279,6 +296,86 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 224c2c02a6c57d545b5b6be9c4b30130, type: 3}
+--- !u!1001 &571952287
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: hasCharacter
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: characterSprite
+      value: 
+      objectReference: {fileID: -6619366235905878019, guid: 5dfe9ff83a16bc64f85ef75d601ff7fc, type: 3}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[0].line
+      value: " I was a diver , trying to make a living by finding treasures so i
+        could save my daughter . I was so close , but i chickened out at the last
+        minute . I don\u2019t know if I could forgive myself for what I did , if
+        only I had dynamite. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[0].characterName
+      value: Roald Cesaro-Stolz
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652677392059805956, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_Name
+      value: Stolz bubble
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
 --- !u!1001 &596201710
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -336,6 +433,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 30f01add198df84418521c13951ef1a0, type: 3}
+--- !u!114 &597257328 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8969422715469869634, guid: b202f42c8c7cdb340ab3df4f28564efd, type: 3}
+  m_PrefabInstance: {fileID: 5490118860965315080}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &800961108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -595,6 +703,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterTextBox
       objectReference: {fileID: 0}
+    - target: {fileID: 8292605350138430087, guid: b202f42c8c7cdb340ab3df4f28564efd, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8641026430979758582, guid: b202f42c8c7cdb340ab3df4f28564efd, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -680,6 +792,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b202f42c8c7cdb340ab3df4f28564efd, type: 3}
+--- !u!114 &5768611992795980313 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7804954610680925383, guid: b202f42c8c7cdb340ab3df4f28564efd, type: 3}
+  m_PrefabInstance: {fileID: 5490118860965315080}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -689,3 +812,4 @@ SceneRoots:
   - {fileID: 101537056}
   - {fileID: 1912887830}
   - {fileID: 4119718832838727857}
+  - {fileID: 571952287}
