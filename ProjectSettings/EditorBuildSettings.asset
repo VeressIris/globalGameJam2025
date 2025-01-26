@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FishSpawnerScene.unity
     guid: a2272788aaf19544f9a5819b4727c9d8
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: 24787a8a89759da4b9b2c2f0ad78b4fe
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

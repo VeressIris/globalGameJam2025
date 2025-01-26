@@ -13,11 +13,13 @@ public class Cutscene : MonoBehaviour
     private SceneClass currentScene;
     private DialogueManager dialogueManager;
     private bool talking = false;
+    private SceneLoader sceneLoader;
 
     void Awake()
     {
         imageCanvas = GameObject.Find("ImageCanvas").GetComponent<Image>();
         dialogueManager = this.gameObject.GetComponent<DialogueManager>();
+        sceneLoader = GameObject.Find("transition shape").GetComponent<SceneLoader>();
     }
 
     void Start()
@@ -51,7 +53,8 @@ public class Cutscene : MonoBehaviour
         if (currentSceneIndex >= scenes.Count)
         {
             // load next unity scene
-            SceneManager.LoadScene(destinationSceneIndex);
+            //SceneManager.LoadScene(destinationSceneIndex);
+            sceneLoader.LoadLevel(destinationSceneIndex);
             return;
         }
 
