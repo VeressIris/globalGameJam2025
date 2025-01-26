@@ -1505,7 +1505,7 @@ MonoBehaviour:
   animationSpeedCoef: 0.15
   minAnimSwimmingSpeed: 0.2
   surfaceHeight: 34
-  maxDepth: -32
+  maxDepth: -20
   flipped: 0
 --- !u!50 &1229352522125050030
 Rigidbody2D:

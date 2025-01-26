@@ -122,6 +122,7 @@ public class Fish : MonoBehaviour
                 enabled = false;
                 isDead = true;
                 bullet.PlayDestroyAnimation();
+                AudioManager.instance.Play("FishDied");
             }
             else
             {

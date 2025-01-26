@@ -27,6 +27,8 @@ public class SpearGun : MonoBehaviour
         var dif = Camera.main.ScreenToWorldPoint(Input.mousePosition) - clone.transform.position;
         clone.transform.eulerAngles = new Vector3(0, 0, Mathf.Atan2(dif.y, dif.x) * Mathf.Rad2Deg);
         clone.GetComponent<SpriteRenderer>().flipX = clone.GetComponent<SpriteRenderer>().flipY = !GetComponentInParent<PlayerController>().flipped;
+
+        AudioManager.instance.Play("ShootingSpear");
     }
 
     void Update()

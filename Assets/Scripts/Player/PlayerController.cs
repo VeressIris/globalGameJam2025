@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
     public bool shouldShowInventory => surfaceHeight < transform.position.y;
 
     [Range(0, 1)]
+    public bool isDead => oxygen == 0;
     public float oxygen;
     public float oxygenCapacitySeconds = 30;
 
@@ -29,6 +30,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float animationSpeedCoef = 1;
     [SerializeField] float minAnimSwimmingSpeed = .1f;
 
+    public float depthNormalized => Mathf.InverseLerp(maxDepth, surfaceHeight, transform.position.y);
     [SerializeField] float surfaceHeight;
     [SerializeField] float maxDepth;
 
@@ -49,7 +51,7 @@ public class PlayerController : MonoBehaviour
     void UpdateCamera()
     {
         var isSprinting = Input.GetKey(KeyCode.LeftShift);
-        Camera.main.orthographicSize = Mathf.SmoothDamp(Camera.main.orthographicSize, isSprinting ? 8 : 6, ref cameraSizeVelocity, .5f);
+        Camera.main.orthographicSize = Mathf.SmoothDamp(Camera.main.orthographicSize, isSprinting ? 6 : 5, ref cameraSizeVelocity, .5f);
     }
 
     void UpdateOxygen()
@@ -64,21 +66,18 @@ public class PlayerController : MonoBehaviour
             oxygen -= Time.deltaTime / oxygenCapacitySeconds;
             oxygen = Mathf.Clamp01(oxygen);
         }
-
-        if (oxygen == 0)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        }
     }
 
     void UpdateVignette()
     {
-        vignette.intensity.value = Utils.Remap(transform.position.y, maxDepth, surfaceHeight, .2f, 0.0f);
+        vignette.intensity.value = Utils.Remap(transform.position.y, maxDepth, surfaceHeight, .3f, 0.0f);
     }
 
     void UpdateAnimations()
     {
-        animator.SetFloat("SwimmingSpeed", Mathf.Max(Mathf.Abs(currentVelocity.magnitude * animationSpeedCoef), minAnimSwimmingSpeed));
+        var magSpeed = currentVelocity.magnitude;
+        animator.SetFloat("SwimmingSpeed", Mathf.Max(Mathf.Abs(magSpeed * animationSpeedCoef), minAnimSwimmingSpeed));
+        AudioManager.instance.SetVolume("SwimmingLoop", Mathf.Lerp(.1f,.5f,Mathf.Clamp01(magSpeed/horizontalVelocity)));
     }
 
     float rotationSpeed = 0;
@@ -96,7 +95,7 @@ public class PlayerController : MonoBehaviour
     {
         bool sprinting = Input.GetKey(KeyCode.LeftShift);
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) )
+        if (Input.GetKeyDown(KeyCode.Mouse0) && UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject() == false)
         {
             spearGun.Fire();
         }
@@ -130,7 +129,7 @@ public class PlayerController : MonoBehaviour
 
         if (input == Vector2.zero)
             rigibody.Sleep();
-
+        AudioManager.instance.SetPitch("SwimmingLoop", sprinting ? 1 : .5f);
     }
 
     #region Unity Messages
