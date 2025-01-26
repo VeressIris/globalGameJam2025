@@ -33,6 +33,7 @@ public class OxygenUI : MonoBehaviour
         else if(passedHalf == false)
         {
             passedHalf = true;
+            AudioManager.instance.Play("Warning");
             var animDuration = .4f;
             fillImage.DOColor(Color.red, animDuration);
             fillImage.transform.parent.DOScale(1.2f, animDuration).OnComplete(() =>
