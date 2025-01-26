@@ -4,9 +4,15 @@ using System.Collections.Generic;
 using System.Drawing;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BubbleMemoriesManager : MonoBehaviour
 {
+
+    [SerializeField] Image profile;
+    [SerializeField] Sprite jay;
+    [SerializeField] Sprite liza;
+    [SerializeField] Sprite nat;
 
     [SerializeField] TextMeshProUGUI dialogueText;
 
@@ -28,6 +34,21 @@ public class BubbleMemoriesManager : MonoBehaviour
         lines = list;
         convoIdx = -1;
         NextLine();
+
+        if (list[0].characterName == "Liza Brothl")
+        {
+            profile.sprite = liza;
+        }
+        else if (list[0].characterName == "Natasha")
+        {
+
+            profile.sprite = nat;
+        }
+        else if(list[0].characterName == "Jay Revenez")
+        {
+
+            profile.sprite = jay;
+        }
     }
 
     void NextLine()
