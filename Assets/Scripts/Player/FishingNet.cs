@@ -6,12 +6,12 @@ public class FishingNet : MonoBehaviour
 
     public void SellFish(PlayerController player)
     {
-        foreach(Transform t in fishPosition)
+        foreach (Transform t in fishPosition)
         {
             var fish = t.GetComponent<Fish>();
             if (fish)
             {
-                player.money +=(int) fish.value;
+                player.money += (int)fish.value;
             }
         }
         Utils.DestroyChildren(fishPosition);

@@ -1281,10 +1281,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1229352522125050030, guid: 30f01add198df84418521c13951ef1a0, type: 3}
-      propertyPath: m_LinearDamping
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2580267471923250031, guid: 30f01add198df84418521c13951ef1a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.7
@@ -1323,22 +1319,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2580267471923250031, guid: 30f01add198df84418521c13951ef1a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2785322804349714832, guid: 30f01add198df84418521c13951ef1a0, type: 3}
-      propertyPath: m_GravityScale
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2785322804349714832, guid: 30f01add198df84418521c13951ef1a0, type: 3}
-      propertyPath: m_LinearDamping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2785322804349714832, guid: 30f01add198df84418521c13951ef1a0, type: 3}
-      propertyPath: m_AngularDamping
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8196334083841327432, guid: 30f01add198df84418521c13951ef1a0, type: 3}
-      propertyPath: m_EnableCollision
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8896253739744198894, guid: 30f01add198df84418521c13951ef1a0, type: 3}

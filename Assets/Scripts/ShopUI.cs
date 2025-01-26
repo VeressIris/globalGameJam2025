@@ -20,6 +20,9 @@ public class ShopUI : MonoBehaviour
         {
             but.onClick.AddListener(() =>
             {
+                var tank = player.transform.Find("Tank").GetComponent<Image>();
+                var spearGun = player.transform.Find("Mana Gun").Find("Gun").GetComponent<Image>();
+                
                 int price = 0;
 
                 if (but.name == "Gun1")

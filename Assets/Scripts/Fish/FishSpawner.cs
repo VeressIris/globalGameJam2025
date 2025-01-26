@@ -12,9 +12,13 @@ public class FishSpawner : MonoBehaviour
 
     public Vector3 RandomPointInCircle()
     {
-        var angle = Random.Range(0, Mathf.PI * 2);
-        return transform.position + new Vector3(Mathf.Cos(angle), Mathf.Sign(angle), 0) * radius * Random.value;
+        float angle = Random.Range(0, Mathf.PI * 2);
+        float distance = Mathf.Sqrt(Random.value) * radius; // Scale distance by sqrt for uniform distribution
+        float x = Mathf.Cos(angle) * distance;
+        float y = Mathf.Sin(angle) * distance;
+        return transform.position + new Vector3(x, y, 0);
     }
+
 
     void Start()
     {
