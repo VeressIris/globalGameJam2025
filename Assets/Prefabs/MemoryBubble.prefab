@@ -29,8 +29,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.47, y: 0.4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.17, y: 0.17, z: 0.17}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -78,8 +78,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.44487947, g: 0.7915245, b: 0.8679245, a: 1}
+  m_Sprite: {fileID: 8509177007065246112, guid: 8b4cecfd22a8a1c4ea0ade66fa7081cf, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -124,7 +124,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.5
+  m_Radius: 3.06
 --- !u!114 &1745472174379903475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,4 +138,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   conversation: []
-  delay: 0.18
+  textBox: {fileID: 0}
+  hasCharacter: 0
+  characterSprite: {fileID: 0}
+  currentLine: 0
+  delay: 0.08
+  usedElsewhere: 0

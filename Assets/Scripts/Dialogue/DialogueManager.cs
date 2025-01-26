@@ -2,11 +2,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System.Collections;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
     public List<ConversationLineClass> conversation = new List<ConversationLineClass>();
     [HideInInspector] public GameObject textBox;
+    [SerializeField] private bool hasCharacter = false;
+    [SerializeField] private Sprite characterSprite;
+    private Image characterImage;
     private TMP_Text characterNameTMP;
     private TMP_Text textTMP;
     [HideInInspector] public int currentLine = 0;
@@ -21,7 +25,16 @@ public class DialogueManager : MonoBehaviour
 
     void Awake()
     {
-        textBox = GameObject.Find("TextBox");
+        if (!hasCharacter)
+        {
+            textBox = GameObject.Find("TextBox");
+        }
+        else
+        {
+            textBox = GameObject.Find("CharacterTextBox");
+            characterImage = GameObject.Find("CharacterImage").GetComponent<Image>();
+            characterImage.sprite = characterSprite;
+        }
         characterNameTMP = GameObject.Find("Name").GetComponent<TMP_Text>();
         textTMP = GameObject.Find("Lines").GetComponent<TMP_Text>();
     }
