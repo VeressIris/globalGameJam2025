@@ -8,6 +8,7 @@ public class Fish : MonoBehaviour
     [Header("Fish properties")]
     public FishSpawner fishSpawner;
     public bool isDead;
+    public bool scared;
 
     [SerializeField] float moveSpeed = 1.5f;
     [SerializeField] GameObject bloodEffect;
@@ -24,21 +25,21 @@ public class Fish : MonoBehaviour
     bool moving;
     Vector2 target;
     // Flip horizontally to face target
-    void Flip()
+    void UpdateFlip()
     {
         Vector2 direction = target - (Vector2)transform.position;
 
-        if (direction.x > 0 && flipped == false)
+        if (direction.x > 0 && flipped == true)
         {
             transform.DOKill();
             transform.DOScaleX(scaleX, 0.3f);
-            flipped = true;
+            flipped = false;
         }
-        else if (direction.x < 0 && flipped == true)
+        else if (direction.x < 0 && flipped == false)
         {
             transform.DOKill();
             transform.DOScaleX(-scaleX, 0.3f);
-            flipped = false;
+            flipped = true;
         }
     }
 
@@ -65,8 +66,12 @@ public class Fish : MonoBehaviour
 
     void Update()
     {
-        var distToPlayer = ((Vector2)fishSpawner.player.transform.position-target).sqrMagnitude;
-        if (distToPlayer < 2*2)
+        UpdateFlip();
+
+        var targetDistToPlayer = ((Vector2)fishSpawner.player.transform.position-target).sqrMagnitude;
+        var distToPlayer = (fishSpawner.player.transform.position - transform.position).sqrMagnitude;
+        var scaredDist = 7;
+        if (targetDistToPlayer < scaredDist*scaredDist)
         {
             moving = false;
         }
@@ -74,11 +79,10 @@ public class Fish : MonoBehaviour
         if (moving)
         {
             if (Vector2.Distance(transform.position, target) > 0.1f)
-            {
-                var scared = fishSpawner.isPlayerInRadius;
-                var moveSpeedActual = scared ? moveSpeed : moveSpeed * 2; 
+            {  
+                scared = distToPlayer < scaredDist * scaredDist; 
+                var moveSpeedActual = scared ? moveSpeed * 2 : moveSpeed; 
                 transform.position = Vector2.MoveTowards(transform.position, target,(moveSpeedActual * Time.deltaTime));
-                Flip();
             }
             else
             {
