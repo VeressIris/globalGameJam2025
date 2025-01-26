@@ -119,6 +119,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!224 &514185196 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+  m_PrefabInstance: {fileID: 7012769060521382539}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &559825716
 GameObject:
   m_ObjectHideFlags: 0
@@ -176,7 +181,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 131851729742907236, guid: 6be057c9729f33344873e66c31e366df, type: 3}
+  m_Sprite: {fileID: 0}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -273,108 +278,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &759926188
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1160251572}
-    m_Modifications:
-    - target: {fileID: 2768007376946299219, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-      propertyPath: m_Name
-      value: transition shape
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
---- !u!224 &759926189 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
-  m_PrefabInstance: {fileID: 759926188}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1160251568
 GameObject:
   m_ObjectHideFlags: 0
@@ -469,10 +372,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1887692622}
+  - {fileID: 1534475678}
   - {fileID: 559825717}
   - {fileID: 1288631820}
-  - {fileID: 759926189}
+  - {fileID: 514185196}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -531,101 +434,189 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b47d977563e192e488000292bab514b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destinationSceneIndex: 2
+  destinationSceneIndex: 0
   scenes:
   - hasImage: 0
     sprite: {fileID: 0}
     hasConversation: 1
     conversation:
+    - characterName: Luna
+      line: ' Is this it?'
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Luna
+      line: ' Have I finally found it?'
+      hasAudio: 0
+      clip: {fileID: 0}
+  - hasImage: 0
+    sprite: {fileID: 0}
+    hasConversation: 1
+    conversation:
+    - characterName: Goddess
+      line: " My Luna, you\u2019ve come. I knew you would. "
+      hasAudio: 0
+      clip: {fileID: 0}
+  - hasImage: 0
+    sprite: {fileID: 0}
+    hasConversation: 1
+    conversation:
+    - characterName: Luna
+      line: A-a-aunt S-sylvie?
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Luna
+      line: Is it really you?
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Luna
+      line: I can't believe it...
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Luna
+      line: I thought you were gone forever...
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Goddess
+      line: " My dear Luna, I am here. You trusted me, even in the dark. I\u2019m
+        so proud of you. "
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Luna
+      line: " *sobbing* I thought this was a cruel joke\u2014some sick prank. But
+        it\u2019s real. You're real!"
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Goddess
+      line: ' *nodding* I am. And so are the stories, my brave girl. '
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Luna
+      line: " Why? Why did you leave me? Why didn\u2019t you tell me where you were
+        going? Why didn\u2019t you say goodbye? *she begins to cry uncontrollably,
+        her words spilling out like a dam breaking* I mourned you every day. I thought
+        I\u2019d lost you forever."
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Goddess
+      line: ' Oh, my little star, my universe, my Luna. I never wanted to hurt you.
+        I never wanted to leave you. '
+      hasAudio: 0
+      clip: {fileID: 0}
     - characterName: 
-      line: ' *knock knock knock*'
-      hasAudio: 1
-      clip: {fileID: 8300000, guid: b9182fa72383f0f4084cc039aecddd97, type: 3}
-    - characterName: Unknown
-      line: Coming!
+      line: ' Luna feels a faint warmth as the goddess''s ethereal touch grazes her
+        cheek. She leans into it instinctively. '
       hasAudio: 0
       clip: {fileID: 0}
-  - hasImage: 1
-    sprite: {fileID: 131851729742907236, guid: 6be057c9729f33344873e66c31e366df, type: 3}
+    - characterName: Luna
+      line: ' Then why? Why did you go? '
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Goddess
+      line: " *her voice tinged with regret* There was a legend\u2014a story of the
+        Bubble Goddess, protector of the tides and keeper of the deep\u2019s secrets.
+        I thought I was seeking her to ask for help, to restore balance. But when
+        I found her... she chose me. She gave me her gift. "
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Luna
+      line: She made you the goddess?
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Goddess
+      line: " Yes, my child. The mantle passed to me. It was a burden I didn\u2019t
+        want but couldn\u2019t refuse. I couldn\u2019t bring you with me\u2014it
+        wasn\u2019t safe. You were so young, and the world I entered was no place
+        for a child. "
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Luna
+      line: ' *angrily through her tears* But you left me all alone! You should have
+        told me! '
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Goddess
+      line: " You\u2019re right. You deserved to know. I thought I was protecting
+        you, but instead, I hurt you. For that, I\u2019m so sorry, my Luna. "
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Luna
+      line: " I just wanted you back. I didn\u2019t care about anything else. "
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Goddess
+      line: " And now, here we are. You found me. You\u2019ve grown so strong, so
+        brave. You are everything I hoped you would be. "
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Goddess
+      line: " And now, here we are. You found me. You\u2019ve grown so strong, so
+        brave. You are everything I hoped you would be. "
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: 
+      line: " And now, here we are. You found me. You\u2019ve grown so strong, so
+        brave. You are everything I hoped you would be. "
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Luna
+      line: " Can\u2019t you come home with me? Can\u2019t things go back to how
+        they were? "
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Goddess
+      line: " And now, here we are. You found me. You\u2019ve grown so strong, so
+        brave. You are everything I hoped you would be. "
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Goddess
+      line: " And now, here we are. You found me. You\u2019ve grown so strong, so
+        brave. You are everything I hoped you would be. "
+      hasAudio: 0
+      clip: {fileID: 0}
+  - hasImage: 0
+    sprite: {fileID: 0}
     hasConversation: 1
     conversation:
-    - characterName: Luna
-      line: A letter? What is this?
-      hasAudio: 0
-      clip: {fileID: 0}
-  - hasImage: 1
-    sprite: {fileID: 5126874977342637709, guid: 74565eacfc080fb4aa68c73130844fd1, type: 3}
-    hasConversation: 1
-    conversation:
-    - characterName: Luna
-      line: Bubbles?
-      hasAudio: 0
-      clip: {fileID: 0}
-  - hasImage: 1
-    sprite: {fileID: 1411394088109211406, guid: d88e6312ac5b4db4f839fed586544544, type: 3}
-    hasConversation: 1
-    conversation:
-    - characterName: Luna
-      line: This can't be...
-      hasAudio: 0
-      clip: {fileID: 0}
-    - characterName: The letter
-      line: My Dearest Sweet Pea,
-      hasAudio: 0
-      clip: {fileID: 0}
-    - characterName: The letter
-      line: "I know this may not be the way you ever expected to hear from me again\u2014after
-        so much time, after all that\u2019s happened\u2014but here I am. I never
-        meant to disappear from your life, and yet the path I walked led me far beyond
-        where either of us could have imagined."
-      hasAudio: 0
-      clip: {fileID: 0}
-    - characterName: The letter
-      line: 'But now, at last, I have found what I was looking for. What I was meant
-        for. '
-      hasAudio: 0
-      clip: {fileID: 0}
-    - characterName: The letter
-      line: "The tales we whispered about, the ones you held onto even when others
-        called them foolish\u2014they were never just stories. Magic is not just
-        a thing of the past, nor something hidden in dusty pages."
-      hasAudio: 0
-      clip: {fileID: 0}
-    - characterName: The letter
-      line: 'It lingers in the air, in the quiet spaces between heartbeats, in the
-        moments where the world shifts ever so slightly and something greater looks
-        back. Never doubt that. Never let go of that wonder. '
-      hasAudio: 0
-      clip: {fileID: 0}
-    - characterName: The letter
-      line: If there is still a place for me in your heart, if you can find even
-        the smallest thread of forgiveness for the choice I made, then come. Find
-        me where our laughter once echoed along the winding roads, where the sunsets
-        melted into the hills and we believed anything was possible.
-      hasAudio: 0
-      clip: {fileID: 0}
-    - characterName: The letter
-      line: 'I will be waiting. '
-      hasAudio: 0
-      clip: {fileID: 0}
-    - characterName: The letter
-      line: With all my love,
-      hasAudio: 0
-      clip: {fileID: 0}
-    - characterName: The letter
-      line: Your Aunt
+    - characterName: Goddess
+      line: " I didn\u2019t want to leave without seeing you one last time. To tell
+        you everything. To tell you how much I love you, how proud I am of you. "
       hasAudio: 0
       clip: {fileID: 0}
     - characterName: Luna
-      line: "I can\u2019t believe it, is it?"
+      line: " *sobbing* I don\u2019t want to lose you all over again. "
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Goddess
+      line: " You won\u2019t lose me, my star. I\u2019ll always be with you\u2014in
+        every wave, every ripple, every glimmer of light that dances on the water.
+        My love for you is eternal. "
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: 
+      line: ' The goddess begins to glow brighter, her form dissolving into particles
+        of light. Luna reaches out desperately, trying to hold onto her. '
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: Goddess
+      line: " Live your life, my Luna. Be the light I know you are. I\u2019ll be
+        watching over you, always. "
+      hasAudio: 0
+      clip: {fileID: 0}
+    - characterName: 
+      line: " The temple fills with a radiant light as the goddess ascends, leaving
+        Luna alone. She stands in the stillness, tears streaming down her face, but
+        her heart now carries both the weight of loss and the strength of her aunt\u2019s
+        love. "
       hasAudio: 0
       clip: {fileID: 0}
     - characterName: Luna
-      line: If someone trying to pull a sick joke this is not funny!
+      line: ' I love you too. Always. '
       hasAudio: 0
       clip: {fileID: 0}
-    - characterName: Luna
-      line: "But what if it\u2019s real, I have to find out!"
+    - characterName: 
+      line: ' The glow lingers for a moment before fading, leaving Luna with a newfound
+        sense of purpose as she exits the temple, ready to honor the legacy of the
+        one she loved most.'
       hasAudio: 0
       clip: {fileID: 0}
 --- !u!114 &1411608504
@@ -742,6 +733,81 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!1 &1534475677
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1534475678}
+  - component: {fileID: 1534475680}
+  - component: {fileID: 1534475679}
+  m_Layer: 5
+  m_Name: Black background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1534475678
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534475677}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1160251572}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1920, y: 1080}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1534475679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534475677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1534475680
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534475677}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1760525601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -750,9 +816,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1160251572}
     m_Modifications:
+    - target: {fileID: 1113284739323375053, guid: b7ae011c2d1ffcf4f911fdaabb2dab4f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 410ea6b49864a354ebc3e497b04561b1, type: 2}
+    - target: {fileID: 1113284739323375053, guid: b7ae011c2d1ffcf4f911fdaabb2dab4f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6226633003741188688, guid: 410ea6b49864a354ebc3e497b04561b1, type: 2}
+    - target: {fileID: 1113284739323375053, guid: b7ae011c2d1ffcf4f911fdaabb2dab4f, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2727292335960263959, guid: b7ae011c2d1ffcf4f911fdaabb2dab4f, type: 3}
       propertyPath: m_Name
       value: TextBox
+      objectReference: {fileID: 0}
+    - target: {fileID: 3101698605971665947, guid: b7ae011c2d1ffcf4f911fdaabb2dab4f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 410ea6b49864a354ebc3e497b04561b1, type: 2}
+    - target: {fileID: 3101698605971665947, guid: b7ae011c2d1ffcf4f911fdaabb2dab4f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6226633003741188688, guid: 410ea6b49864a354ebc3e497b04561b1, type: 2}
+    - target: {fileID: 3101698605971665947, guid: b7ae011c2d1ffcf4f911fdaabb2dab4f, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4395090025127092986, guid: b7ae011c2d1ffcf4f911fdaabb2dab4f, type: 3}
       propertyPath: m_Sprite
@@ -838,86 +928,23 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8843371074237963973, guid: b7ae011c2d1ffcf4f911fdaabb2dab4f, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 410ea6b49864a354ebc3e497b04561b1, type: 2}
+    - target: {fileID: 8843371074237963973, guid: b7ae011c2d1ffcf4f911fdaabb2dab4f, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -6226633003741188688, guid: 410ea6b49864a354ebc3e497b04561b1, type: 2}
+    - target: {fileID: 8843371074237963973, guid: b7ae011c2d1ffcf4f911fdaabb2dab4f, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b7ae011c2d1ffcf4f911fdaabb2dab4f, type: 3}
---- !u!1 &1887692621
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1887692622}
-  - component: {fileID: 1887692624}
-  - component: {fileID: 1887692623}
-  m_Layer: 5
-  m_Name: Black background
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1887692622
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1887692621}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1160251572}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1920, y: 1080}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1887692623
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1887692621}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1887692624
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1887692621}
-  m_CullTransparentMesh: 1
 --- !u!1 &1970665067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1010,6 +1037,103 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &7012769060521382539
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1160251572}
+    m_Modifications:
+    - target: {fileID: 2768007376946299219, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+      propertyPath: m_Name
+      value: transition shape
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5028299633879607192, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 551b8321018bb3c4eb492e51eea84aa9, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

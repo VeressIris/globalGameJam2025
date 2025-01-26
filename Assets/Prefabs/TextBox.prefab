@@ -70,8 +70,8 @@ MonoBehaviour:
     something(red text) down there called me, and I tried to answer. I didn\u2019t
     manage to reach it , and neither the surface , well\u2026 at least alive."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a65c27b7f3e26214c86d39268914c067, type: 2}
-  m_sharedMaterial: {fileID: -4051097079912230268, guid: a65c27b7f3e26214c86d39268914c067, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 410ea6b49864a354ebc3e497b04561b1, type: 2}
+  m_sharedMaterial: {fileID: -6226633003741188688, guid: 410ea6b49864a354ebc3e497b04561b1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -245,8 +245,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Rolad Cezaro Stolz
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a65c27b7f3e26214c86d39268914c067, type: 2}
-  m_sharedMaterial: {fileID: -4051097079912230268, guid: a65c27b7f3e26214c86d39268914c067, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 410ea6b49864a354ebc3e497b04561b1, type: 2}
+  m_sharedMaterial: {fileID: -6226633003741188688, guid: 410ea6b49864a354ebc3e497b04561b1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -456,8 +456,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Press 'Space' to continue
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: a65c27b7f3e26214c86d39268914c067, type: 2}
-  m_sharedMaterial: {fileID: -4051097079912230268, guid: a65c27b7f3e26214c86d39268914c067, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 410ea6b49864a354ebc3e497b04561b1, type: 2}
+  m_sharedMaterial: {fileID: -6226633003741188688, guid: 410ea6b49864a354ebc3e497b04561b1, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
