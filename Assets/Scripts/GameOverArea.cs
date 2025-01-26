@@ -1,4 +1,6 @@
+using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameOverArea : MonoBehaviour
 {
@@ -6,7 +8,10 @@ public class GameOverArea : MonoBehaviour
     {
         if(collision.gameObject.GetComponent<PlayerController>() != null)
         {
-            FindAnyObjectByType<HudUI>().ShowNextScreen();
+            FindAnyObjectByType<HudUI>().ShowNextScreen().OnComplete(() =>
+            {
+                SceneManager.LoadScene("Ending");
+            });
         }
     }
 }

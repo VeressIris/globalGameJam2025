@@ -2829,7 +2829,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2046381437573783681, guid: 30f01add198df84418521c13951ef1a0, type: 3}
       propertyPath: money
-      value: 0
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 2580267471923250031, guid: 30f01add198df84418521c13951ef1a0, type: 3}
       propertyPath: m_LocalPosition.x

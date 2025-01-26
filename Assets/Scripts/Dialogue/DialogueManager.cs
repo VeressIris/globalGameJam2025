@@ -61,7 +61,10 @@ public class DialogueManager : MonoBehaviour
                     canvasGroup.alpha = 0;
                     currentLine = 0;
                     textTMP.text = "";
-                    characterImage.sprite = null;
+                    if (characterImage)
+                    {
+                        characterImage.sprite = null;
+                    }
                     
                     // Trigger the event when dialogue ends
                     OnDialogueEnd?.Invoke();
