@@ -1,3 +1,4 @@
+using DG.Tweening;
 using UnityEngine;
 
 public class FishingNet : MonoBehaviour
@@ -23,6 +24,6 @@ public class FishingNet : MonoBehaviour
         Destroy(fish.GetComponent<Rigidbody2D>());
         var scale = fish.transform.lossyScale;
         fish.transform.parent = fishPosition;
-        fish.transform.position = fishPosition.position;
+        fish.transform.DOLocalMove(Vector3.zero,1);
     }
 }
