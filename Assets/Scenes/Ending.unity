@@ -278,6 +278,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &664519079 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2727292335960263959, guid: b7ae011c2d1ffcf4f911fdaabb2dab4f, type: 3}
+  m_PrefabInstance: {fileID: 1760525601}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1160251568
 GameObject:
   m_ObjectHideFlags: 0
@@ -388,6 +393,18 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8570509594798815796, guid: b7ae011c2d1ffcf4f911fdaabb2dab4f, type: 3}
   m_PrefabInstance: {fileID: 1760525601}
   m_PrefabAsset: {fileID: 0}
+--- !u!225 &1288631821
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 664519079}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &1411608500
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,8 +453,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destinationSceneIndex: 0
   scenes:
-  - hasImage: 0
-    sprite: {fileID: 0}
+  - hasImage: 1
+    sprite: {fileID: -855298285791758126, guid: 5647e0fb871236d48910c9fd60307c67, type: 3}
     hasConversation: 1
     conversation:
     - characterName: Luna
@@ -448,16 +465,16 @@ MonoBehaviour:
       line: ' Have I finally found it?'
       hasAudio: 0
       clip: {fileID: 0}
-  - hasImage: 0
-    sprite: {fileID: 0}
+  - hasImage: 1
+    sprite: {fileID: 6937817954938267909, guid: 12133765fb53b6a4ba8d157e7cf23ba2, type: 3}
     hasConversation: 1
     conversation:
     - characterName: Goddess
       line: " My Luna, you\u2019ve come. I knew you would. "
       hasAudio: 0
       clip: {fileID: 0}
-  - hasImage: 0
-    sprite: {fileID: 0}
+  - hasImage: 1
+    sprite: {fileID: -6470460504253458178, guid: e15e5f46de6e40142bfcda2c5b2b7a3a, type: 3}
     hasConversation: 1
     conversation:
     - characterName: Luna
@@ -573,8 +590,8 @@ MonoBehaviour:
         brave. You are everything I hoped you would be. "
       hasAudio: 0
       clip: {fileID: 0}
-  - hasImage: 0
-    sprite: {fileID: 0}
+  - hasImage: 1
+    sprite: {fileID: -4178046375966092550, guid: 395f4901d19de1a4fa23f50f7f918a40, type: 3}
     hasConversation: 1
     conversation:
     - characterName: Goddess
@@ -633,6 +650,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   conversation: []
   textBox: {fileID: 0}
+  hasCharacter: 0
+  characterSprite: {fileID: 0}
   currentLine: 0
   delay: 0.05
   usedElsewhere: 1
@@ -646,10 +665,10 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 218ffae23cdf81c459c19c9f01abbc58, type: 3}
+  m_Resource: {fileID: 8300000, guid: 218ffae23cdf81c459c19c9f01abbc58, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.67
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -943,7 +962,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2727292335960263959, guid: b7ae011c2d1ffcf4f911fdaabb2dab4f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1288631821}
   m_SourcePrefab: {fileID: 100100000, guid: b7ae011c2d1ffcf4f911fdaabb2dab4f, type: 3}
 --- !u!1 &1970665067
 GameObject:
