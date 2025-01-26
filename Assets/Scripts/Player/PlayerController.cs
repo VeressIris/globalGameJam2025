@@ -1,5 +1,6 @@
 using DG.Tweening;
 using System;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
@@ -11,7 +12,7 @@ public class PlayerController : MonoBehaviour
     Rigidbody2D rigibody;
     Animator animator;
 
-
+    public bool hasDynamite;
     public int money;
     public bool shouldShowInventory => surfaceHeight < transform.position.y;
 
@@ -35,14 +36,21 @@ public class PlayerController : MonoBehaviour
     Vignette vignette;
     FishingNet fishNet;
 
-    bool flipped;
+    public bool flipped;
     float scaleX;
 
     Vector2 velocityDrv;
     Vector2 currentVelocity;
 
     float targetSpearGunRotation;
-    float targetRotation;
+
+    float cameraSizeVelocity;
+    float initialOrthoSize;
+    void UpdateCamera()
+    {
+        var isSprinting = Input.GetKey(KeyCode.LeftShift);
+        Camera.main.orthographicSize = Mathf.SmoothDamp(Camera.main.orthographicSize, isSprinting ? 8 : 6, ref cameraSizeVelocity, .5f);
+    }
 
     void UpdateOxygen()
     {
@@ -70,16 +78,17 @@ public class PlayerController : MonoBehaviour
 
     void UpdateAnimations()
     {
-        animator.SetFloat("SwimmingSpeed", Mathf.Max(Mathf.Abs(currentVelocity.x * animationSpeedCoef), minAnimSwimmingSpeed));
+        animator.SetFloat("SwimmingSpeed", Mathf.Max(Mathf.Abs(currentVelocity.magnitude * animationSpeedCoef), minAnimSwimmingSpeed));
     }
 
-
+    float rotationSpeed = 0;
     void UpdateSpearGunRotation()
     {
         var dif = (Camera.main.ScreenToWorldPoint(Input.mousePosition) - spearGun.transform.position);
         targetSpearGunRotation = (flipped ? (Mathf.Atan2(dif.y, dif.x) * Mathf.Rad2Deg) : (180 + Mathf.Atan2(dif.y, dif.x) * Mathf.Rad2Deg));
+         
         var eu = spearGun.transform.eulerAngles;
-        eu.z = targetSpearGunRotation;
+        eu.z = Mathf.SmoothDampAngle(eu.z, targetSpearGunRotation, ref rotationSpeed,.1f);
         spearGun.transform.eulerAngles = eu;
     }
 
@@ -87,7 +96,7 @@ public class PlayerController : MonoBehaviour
     {
         bool sprinting = Input.GetKey(KeyCode.LeftShift);
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) )
         {
             spearGun.Fire();
         }
@@ -111,7 +120,7 @@ public class PlayerController : MonoBehaviour
             input += new Vector2(1, 0);
             flipped = true;
         }
-        var targetVelocity = Vector2.Scale(input, new Vector2(sprinting ? horizontalVelocity * 2 : horizontalVelocity, verticalVelocity));
+        var targetVelocity = Vector2.Scale(input, new Vector2(sprinting ? horizontalVelocity * 2 : horizontalVelocity, sprinting ? verticalVelocity * 1.5f : verticalVelocity));
         currentVelocity = Vector2.SmoothDamp(currentVelocity, targetVelocity, ref velocityDrv, .2f);
         rigibody.linearVelocity = currentVelocity;
 
@@ -149,6 +158,7 @@ public class PlayerController : MonoBehaviour
         UpdateAnimations();
         UpdateVignette();
         UpdateOxygen();
+        UpdateCamera();
     }
 
     void OnTriggerEnter2D(Collider2D collision)

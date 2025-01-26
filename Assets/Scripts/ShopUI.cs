@@ -5,8 +5,15 @@ using UnityEngine.UI;
 
 public class ShopUI : MonoBehaviour
 {
+
     [SerializeField] List<Image> digiImages;
     [SerializeField] List<Sprite> digits;
+    
+    [SerializeField] Color equipmentColor1;
+    [SerializeField] Color equipmentColor2;
+    [SerializeField] Color equipmentColor3;
+
+    List<string> unlocked = new();
 
     CanvasGroup canvasGroup;
     PlayerController player;
@@ -20,20 +27,21 @@ public class ShopUI : MonoBehaviour
         {
             but.onClick.AddListener(() =>
             {
-                var tank = player.transform.Find("Tank").GetComponent<Image>();
-                var spearGun = player.transform.Find("Mana Gun").Find("Gun").GetComponent<Image>();
-                
-                int price = 0;
+                var tank = player.transform.Find("Tank").GetComponent<SpriteRenderer>();
+                var spearGunImage = player.transform.Find("Mana Gun").Find("Gun").GetComponent<SpriteRenderer>();
+                var spearGun = player.GetComponentInChildren<SpearGun>();
 
+                int price = 100000;
+                
                 if (but.name == "Gun1")
                 {
                     price = 5;
                 }
-                else if (but.name == "Gun2")
+                else if (but.name == "Gun2" && unlocked.Contains("Gun1"))
                 {
                     price = 25;
                 }
-                else if (but.name == "Gun3")
+                else if (but.name == "Gun3" && unlocked.Contains("Gun2"))
                 {
                     price = 50;
                 }
@@ -41,11 +49,11 @@ public class ShopUI : MonoBehaviour
                 {
                     price = 15;
                 }
-                else if (but.name == "Oxigen2")
+                else if (but.name == "Oxigen2" && unlocked.Contains("Oxigen1"))
                 {
                     price = 30;
                 }
-                else if (but.name == "Oxigen3")
+                else if (but.name == "Oxigen3" && unlocked.Contains("Oxigen2"))
                 {
                     price = 60;
                 }
@@ -58,42 +66,50 @@ public class ShopUI : MonoBehaviour
                 {
                     return;
                 }
+                unlocked.Add(but.name);
                 player.money -= price;
                 but.interactable = false;
 
                 if (but.name == "Gun1")
                 {
-
+                    spearGunImage.color = equipmentColor1;
+                    spearGun.firingSpeed = 15;
                 }
                 else if (but.name == "Gun2")
                 {
-
+                    spearGunImage.color = equipmentColor2;
+                    spearGun.firingSpeed = 20;
                 }
                 else if (but.name == "Gun3")
                 {
-
+                    spearGunImage.color = equipmentColor3;
+                    spearGun.firingSpeed = 25;
                 }
                 else if (but.name == "Oxigen1")
                 {
-
+                    tank.color = equipmentColor1;
+                    player.oxygenCapacitySeconds = 45;
                 }
                 else if (but.name == "Oxigen2")
                 {
-
+                    tank.color = equipmentColor2;
+                    player.oxygenCapacitySeconds = 60;
                 }
                 else if (but.name == "Oxigen3")
                 {
-
+                    tank.color = equipmentColor3;
+                    player.oxygenCapacitySeconds = 80;
                 }
                 else if (but.name == "Dynamite")
                 {
-
+                    player.hasDynamite = true;
                 }
             });
         }
         canvasGroup = GetComponent<CanvasGroup>();
         canvasGroup.alpha = 0;
         isMenuShown = false;
+        gameObject.SetActive(false);
     }
 
     void DisplayNumber(int number)
@@ -106,27 +122,27 @@ public class ShopUI : MonoBehaviour
     }
 
 
-    void Show()
+    public void Show()
     {
         if (isMenuShown)
             return;
+        gameObject.SetActive(true);
         isMenuShown = true;
         canvasGroup.DOFade(1, .5f);
     }
-    void Hide()
+    public void Hide()
     {
         if (isMenuShown == false)
             return;
         isMenuShown = false;
-        canvasGroup.DOFade(0, .5f);
+        canvasGroup.DOFade(0, .5f).OnComplete(() =>
+        {
+
+        });
     }
 
     void Update()
     {
         DisplayNumber(player.money);
-        if (player.shouldShowInventory)
-            Show();
-        else
-            Hide();
     }
 }

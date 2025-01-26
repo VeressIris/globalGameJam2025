@@ -65,6 +65,12 @@ public class Fish : MonoBehaviour
 
     void Update()
     {
+        var distToPlayer = ((Vector2)fishSpawner.player.transform.position-target).sqrMagnitude;
+        if (distToPlayer < 2*2)
+        {
+            moving = false;
+        }
+
         if (moving)
         {
             if (Vector2.Distance(transform.position, target) > 0.1f)
@@ -81,7 +87,20 @@ public class Fish : MonoBehaviour
         }
         else
         {
-            target = fishSpawner.RandomPointInCircle();
+
+            var maxPos = Vector2.zero;
+            float currentDistance = 0;
+            for(int i = 0; i < 5; i++)
+            {
+                var pos = fishSpawner.RandomPointInCircle();
+                var dist = (fishSpawner.player.transform.position - transform.position).sqrMagnitude;
+                if (currentDistance < dist)
+                {
+                    maxPos = pos;
+                    currentDistance = dist; 
+                }
+            }
+            target = maxPos;
             moving = true;
         }
     }
@@ -91,15 +110,27 @@ public class Fish : MonoBehaviour
         var bullet = collision.gameObject.GetComponent<Bullet>();
         if (bullet)
         {
-            if(bullet.GetComponent<Rigidbody2D>().linearVelocity.magnitude > 1)
+            var hitSpeed = bullet.GetComponent<Rigidbody2D>().linearVelocity.magnitude;
+            var clone = Instantiate(bloodEffect, transform.position, Quaternion.identity);
+            if (hitSpeed > 4)
             {
                 impaledEffect.SetActive(true);
                 enabled = false;
-                isDead = true; 
+                isDead = true;
+                bullet.PlayDestroyAnimation();
+            }
+            else
+            {
+                DOVirtual.DelayedCall(2, () =>
+                {
+                    if (bullet)
+                    {
+                        bullet.PlayDestroyAnimation();
+                    }
+                });
+                clone.transform.localScale *= .5f;
             }
             
-            var clone = Instantiate(bloodEffect, transform.position, Quaternion.identity);
-            bullet.PlayDestroyAnimation();
         }
     }
 

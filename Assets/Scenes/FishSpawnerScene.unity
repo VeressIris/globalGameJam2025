@@ -902,8 +902,9 @@ MonoBehaviour:
   isPlayerInRadius: 0
   fishPrefab: {fileID: 642147576359025261, guid: 835b6ec3a008cdf41bc16d46f06d7031, type: 3}
   radius: 5.62
-  playerExlusionRadius: 10.1
+  playerExlusionRadius: 13.64
   fishCount: 6
+  player: {fileID: 0}
 --- !u!4 &445861648
 Transform:
   m_ObjectHideFlags: 0
@@ -1085,9 +1086,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerInRadius: 0
   fishPrefab: {fileID: 1948981875682384811, guid: 3c042bedd7ef97d4b8bc724831404edd, type: 3}
-  radius: 8.01
-  playerExlusionRadius: 10.95
+  radius: 10.21
+  playerExlusionRadius: 14.96
   fishCount: 6
+  player: {fileID: 0}
 --- !u!4 &620376657
 Transform:
   m_ObjectHideFlags: 0
@@ -1255,9 +1257,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerInRadius: 0
   fishPrefab: {fileID: 1707548951313903717, guid: db0135406e897f647a2c20809deec8a0, type: 3}
-  radius: 8.13
-  playerExlusionRadius: 11.77
+  radius: 10.64
+  playerExlusionRadius: 15
   fishCount: 6
+  player: {fileID: 0}
 --- !u!4 &822312132
 Transform:
   m_ObjectHideFlags: 0
@@ -1267,7 +1270,7 @@ Transform:
   m_GameObject: {fileID: 822312130}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 15.8, y: -14.3, z: -0.064057596}
+  m_LocalPosition: {x: 16.9, y: -13.4, z: -0.064057596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1281,6 +1284,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2046381437573783681, guid: 30f01add198df84418521c13951ef1a0, type: 3}
+      propertyPath: verticalVelocity
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2580267471923250031, guid: 30f01add198df84418521c13951ef1a0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.7
@@ -1338,6 +1345,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6356967043522510867, guid: 224c2c02a6c57d545b5b6be9c4b30130, type: 3}
+      propertyPath: orthographic size
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7012629645833570278, guid: 224c2c02a6c57d545b5b6be9c4b30130, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.071783066
@@ -14699,6 +14710,9 @@ MonoBehaviour:
   - {fileID: -3630965054295935324, guid: 5d7f3b158e36ea04798af591c7c906a1, type: 3}
   - {fileID: 1362023641125735503, guid: 5d7f3b158e36ea04798af591c7c906a1, type: 3}
   - {fileID: 4381314791670756926, guid: 5d7f3b158e36ea04798af591c7c906a1, type: 3}
+  equipmentColor1: {r: 1, g: 0.93489766, b: 0.20188677, a: 1}
+  equipmentColor2: {r: 1, g: 0.62716824, b: 0.27735847, a: 1}
+  equipmentColor3: {r: 1, g: 0.2471698, b: 0.2471698, a: 1}
 --- !u!225 &1437416087
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -15320,8 +15334,9 @@ GameObject:
   - component: {fileID: 1937464685}
   - component: {fileID: 1937464684}
   - component: {fileID: 1937464683}
+  - component: {fileID: 1937464687}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: HUD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15411,6 +15426,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1937464687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937464682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63508b654a9aacb4d9757263acfb88e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shopUI: {fileID: 1437416086}
 --- !u!1 &2056333962
 GameObject:
   m_ObjectHideFlags: 0
@@ -15443,8 +15471,9 @@ MonoBehaviour:
   isPlayerInRadius: 0
   fishPrefab: {fileID: 7797412280298116117, guid: 173b9c8c312c365469693425ee033624, type: 3}
   radius: 5.5
-  playerExlusionRadius: 8.58
+  playerExlusionRadius: 13.27
   fishCount: 6
+  player: {fileID: 0}
 --- !u!4 &2056333964
 Transform:
   m_ObjectHideFlags: 0
@@ -15454,7 +15483,7 @@ Transform:
   m_GameObject: {fileID: 2056333962}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -14.8, y: 8.7, z: -0.064057596}
+  m_LocalPosition: {x: -15, y: 8.2, z: -0.064057596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15491,9 +15520,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerInRadius: 0
   fishPrefab: {fileID: 5902202659360927625, guid: eb52248b28e4e254a85f4de19aff941f, type: 3}
-  radius: 7.35
-  playerExlusionRadius: 10.1
+  radius: 9.6
+  playerExlusionRadius: 16.3
   fishCount: 6
+  player: {fileID: 0}
 --- !u!4 &2065735303
 Transform:
   m_ObjectHideFlags: 0
@@ -15503,7 +15533,7 @@ Transform:
   m_GameObject: {fileID: 2065735301}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13.6, y: -15.4, z: -0.064057596}
+  m_LocalPosition: {x: -13.5, y: -20.3, z: -0.064057596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15540,9 +15570,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerInRadius: 0
   fishPrefab: {fileID: 7954683063403115193, guid: e77ff5e102dcf3745a14307480d8bc61, type: 3}
-  radius: 9.27
-  playerExlusionRadius: 11.46
+  radius: 13.4
+  playerExlusionRadius: 17.2
   fishCount: 6
+  player: {fileID: 0}
 --- !u!4 &2117474117
 Transform:
   m_ObjectHideFlags: 0
@@ -15552,7 +15583,7 @@ Transform:
   m_GameObject: {fileID: 2117474115}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.7, y: 19.2, z: -0.064057596}
+  m_LocalPosition: {x: 21.1, y: 14.8, z: -0.064057596}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

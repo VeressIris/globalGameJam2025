@@ -4,7 +4,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     Rigidbody2D rb;
-    [SerializeField] float firingForce = 10;
+    public float firingForce = 10;
     [SerializeField] GameObject cavitationBubbles;
     [SerializeField] float lifeTime = 10;
     [SerializeField] float shutOffVelocity = .2f;
@@ -23,7 +23,11 @@ public class Bullet : MonoBehaviour
 
         transform.DOScale(0, .4f).OnComplete(() =>
         {
-            Destroy(gameObject);
+            Utils.DisableParticleSystemEmission(gameObject);
+            DOVirtual.DelayedCall(5, () =>
+            {
+                Destroy(gameObject);
+            });
         });
     }
 

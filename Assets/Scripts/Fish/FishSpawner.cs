@@ -8,7 +8,7 @@ public class FishSpawner : MonoBehaviour
     [SerializeField] public float radius;
     [SerializeField] float playerExlusionRadius;
     [SerializeField] int fishCount;
-    PlayerController player;
+    public PlayerController player;
 
     public Vector3 RandomPointInCircle()
     {
