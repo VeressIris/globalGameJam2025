@@ -1,43 +1,88 @@
 using DG.Tweening;
+using System.Diagnostics.Contracts;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class Fish : MonoBehaviour
 {
     [Header("Fish properties")]
-    [SerializeField] private string name;
-    [SerializeField] private int rarity; // 0 indexed
-    [SerializeField] private float moveSpeed = 1.5f;
-    private SpriteRenderer sr;
-    private bool moving = false;
-    private bool flipped = false;
+    public FishSpawner fishSpawner;
+    public bool isDead;
+    public bool scared;
+
+    [SerializeField] float moveSpeed = 1.5f;
+    [SerializeField] GameObject bloodEffect;
+    [SerializeField] public float value;
 
     [Header("Spawning/moving properties")]
-    private Vector2 topLeftCornerLimit;
-    private Vector2 bottomRightCornerLimit;
-    private Vector2 target;
-    private float scaleX;
+    
+    Rigidbody2D rb;
+    SpriteRenderer sr;
+    GameObject impaledEffect;
+    bool flipped = false;
+    float scaleX;
+
+    bool moving;
+    Vector2 target;
+    // Flip horizontally to face target
+    void UpdateFlip()
+    {
+        Vector2 direction = target - (Vector2)transform.position;
+
+        if (direction.x > 0 && flipped == true)
+        {
+            transform.DOKill();
+            transform.DOScaleX(scaleX, 0.3f);
+            flipped = false;
+        }
+        else if (direction.x < 0 && flipped == false)
+        {
+            transform.DOKill();
+            transform.DOScaleX(-scaleX, 0.3f);
+            flipped = true;
+        }
+    }
+
+    #region Unity Messages
 
     void Awake()
     {
         sr = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
     }
+
+    float initialScale;
 
     void Start()
     {
-        SetLimits();
-        transform.position = NewPosition();
+        transform.position = fishSpawner.RandomPointInCircle();
         scaleX = transform.localScale.x;
+        impaledEffect = transform.Find("Spear").gameObject;
+        impaledEffect.SetActive(false);
+        initialScale = transform.localScale.x;
+        //transform.localScale = Vector2.zero;
+        //transform.DOScale(initialScale, 0.3f);
     }
 
     void Update()
     {
+        UpdateFlip();
+
+        var targetDistToPlayer = ((Vector2)fishSpawner.player.transform.position-target).sqrMagnitude;
+        var distToPlayer = (fishSpawner.player.transform.position - transform.position).sqrMagnitude;
+        var scaredDist = 7;
+        if (targetDistToPlayer < scaredDist*scaredDist)
+        {
+            moving = false;
+        }
+
         if (moving)
         {
             if (Vector2.Distance(transform.position, target) > 0.1f)
-            {
-                transform.position = Vector2.MoveTowards(transform.position, target, moveSpeed * Time.deltaTime);
-                Flip();
+            {  
+                scared = distToPlayer < scaredDist * scaredDist; 
+                var moveSpeedActual = scared ? moveSpeed * 2 : moveSpeed; 
+                transform.position = Vector2.MoveTowards(transform.position, target,(moveSpeedActual * Time.deltaTime));
             }
             else
             {
@@ -46,52 +91,52 @@ public class Fish : MonoBehaviour
         }
         else
         {
-            target = NewPosition();
+
+            var maxPos = Vector2.zero;
+            float currentDistance = 0;
+            for(int i = 0; i < 5; i++)
+            {
+                var pos = fishSpawner.RandomPointInCircle();
+                var dist = (fishSpawner.player.transform.position - transform.position).sqrMagnitude;
+                if (currentDistance < dist)
+                {
+                    maxPos = pos;
+                    currentDistance = dist; 
+                }
+            }
+            target = maxPos;
             moving = true;
         }
     }
 
-    // Get new position within bounds
-    public Vector2 NewPosition()
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        float randomX = Random.Range(topLeftCornerLimit.x, bottomRightCornerLimit.x);
-        float randomY = Random.Range(topLeftCornerLimit.y, bottomRightCornerLimit.y);
-
-        return new Vector2(randomX, randomY);
-    }
-
-    // Set limits based on rarity
-    private void SetLimits()
-    {
-        topLeftCornerLimit = new Vector2(-15f, 0f - 10 * rarity - 3);
-        bottomRightCornerLimit = new Vector2(15f, -10 * (rarity + 1));
-        Debug.Log(name + '\n' + topLeftCornerLimit + '\n' + bottomRightCornerLimit);
-    }
-
-    // Flip horizontally to face target
-    private void Flip()
-    {
-        Vector2 direction = target - (Vector2)transform.position;
-
-        if (direction.x > 0)
+        var bullet = collision.gameObject.GetComponent<Bullet>();
+        if (bullet)
         {
-            transform.DOKill();
-            transform.DOScaleX(scaleX, 0.3f);
-            flipped = true;
-        }
-        else if (direction.x < 0)
-        {
-            transform.DOKill();
-            transform.DOScaleX(-scaleX, 0.3f);
-            flipped = false;
+            var hitSpeed = bullet.GetComponent<Rigidbody2D>().linearVelocity.magnitude;
+            var clone = Instantiate(bloodEffect, transform.position, Quaternion.identity);
+            if (hitSpeed > 4)
+            {
+                impaledEffect.SetActive(true);
+                enabled = false;
+                isDead = true;
+                bullet.PlayDestroyAnimation();
+            }
+            else
+            {
+                DOVirtual.DelayedCall(2, () =>
+                {
+                    if (bullet)
+                    {
+                        bullet.PlayDestroyAnimation();
+                    }
+                });
+                clone.transform.localScale *= .5f;
+            }
+            
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision != null && collision.gameObject.GetComponent<Bullet>())
-        {
-            Destroy(this.gameObject);
-        }
-    }
+    #endregion
 }

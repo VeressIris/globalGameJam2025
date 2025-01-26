@@ -753,7 +753,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 6
   m_Sprite: {fileID: 336449416773479990, guid: 3f1be34b09827604fab9d107393c157f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.23137254, g: 0.91102546, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -845,9 +845,9 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 7426312182842698136, guid: 2f15fff30cfd89f4180d143fa87b8c73, type: 3}
-  m_Color: {r: 0.36503384, g: 0.6301887, b: 0.60328895, a: 1}
+  m_Color: {r: 0.20784314, g: 0.29433227, b: 0.42745098, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -869,6 +869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30b99dbb8e0fc7f4f80df2c8b01b2a03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fishPosition: {fileID: 3586399676626064523}
 --- !u!50 &2785322804349714832
 Rigidbody2D:
   serializedVersion: 5
@@ -882,9 +883,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_LinearDamping: 1
+  m_AngularDamping: 0.2
+  m_GravityScale: 0.5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -905,7 +906,7 @@ HingeJoint2D:
   m_GameObject: {fileID: 4282586216799386764}
   m_Enabled: 1
   serializedVersion: 4
-  m_EnableCollision: 1
+  m_EnableCollision: 0
   m_ConnectedRigidBody: {fileID: 1229352522125050030}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
@@ -1133,7 +1134,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 17
   m_Sprite: {fileID: 4931950366692760836, guid: 3f1be34b09827604fab9d107393c157f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.23137255, g: 0.9098039, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1305,7 +1306,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 5
+  m_SortingOrder: 8
   m_Sprite: {fileID: 9140555922170473590, guid: 3f1be34b09827604fab9d107393c157f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1493,14 +1494,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e26e3d1828c9f4543a9a20d90d5e371d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasDynamite: 0
+  money: 300
+  oxygen: 0
+  oxygenCapacitySeconds: 30
   spearGun: {fileID: 6828154823916451158}
-  verticalVelocity: 2
+  verticalVelocity: 4
   horizontalVelocity: 6
   maxTilt: 10
-  middleTiltAngle: -30
-  maxTiltAngle: 30
   animationSpeedCoef: 0.15
   minAnimSwimmingSpeed: 0.2
+  surfaceHeight: 34
+  maxDepth: -32
+  flipped: 0
 --- !u!50 &1229352522125050030
 Rigidbody2D:
   serializedVersion: 5
@@ -1514,7 +1520,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 100
-  m_LinearDamping: 0
+  m_LinearDamping: 1
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
@@ -1697,6 +1703,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf44698bde0c5f244a0a48f60aef27b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firingSpeed: 10
   bullet: {fileID: 9164506284751453571, guid: ac76c754180d7fa4494bdd8b64d58c8c, type: 3}
   firingPoint: {fileID: 4258349860389231811}
   firingDelay: 2
