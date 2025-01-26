@@ -1,0 +1,129 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8161166847147833626
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 18.878265
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 8.867726
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[0].line
+      value: "I was never just a diver\u2014I was a seeker. While others chased treasure
+        or the thrill of the unknown, I had a singular purpose. I wanted to meet
+        HER. And I did."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[1].line
+      value: "I was never just a diver\u2014I was a seeker. While others chased treasure
+        or the thrill of the unknown, I had a singular purpose. I wanted to meet
+        HER. And I did."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[2].line
+      value: "Every legend was true. The whispers of the deep, the stories dismissed
+        as myth\u2014none of it was mere fantasy. Every grueling hour of training,
+        every moment spent pushing myself beyond my limits, had not been in vain"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[3].line
+      value: "She was more than I had imagined. Vast, powerful, and yet\u2026 knowing.
+        I was not a stranger to her. She knew me, recognized me the moment our eyes
+        met, as if I had been expected all along."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[4].line
+      value: ' And then, in an act beyond my wildest hopes, she took me under her
+        wing.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[5].line
+      value: "But it was not an embrace of safety\u2014it was an initiation. A test."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[6].line
+      value: The depths held secrets even darker than I had feared, and she was about
+        to show me just how much I still had to learn.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[0].characterName
+      value: Natasha Reyerheart
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[1].characterName
+      value: Natasha Reyerheart
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[2].characterName
+      value: Natasha Reyerheart
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[3].characterName
+      value: Natasha Reyerheart
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[4].characterName
+      value: Natasha Reyerheart
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[5].characterName
+      value: Natasha Reyerheart
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[6].characterName
+      value: Natasha Reyerheart
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652677392059805956, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_Name
+      value: natasha bubble Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
