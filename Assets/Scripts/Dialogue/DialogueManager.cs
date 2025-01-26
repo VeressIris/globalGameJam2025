@@ -19,32 +19,17 @@ public class DialogueManager : MonoBehaviour
     private Coroutine typewriterCoroutine; // Reference to the running coroutine
     private bool typing = false;
     [SerializeField] private bool usedElsewhere = false;
+    private CanvasGroup canvasGroup;
 
     // Event to notify when the dialogue ends
     public event System.Action OnDialogueEnd;
 
     void Awake()
     {
-        if (!hasCharacter)
+        if (usedElsewhere)
         {
-            textBox = GameObject.Find("TextBox");
+            SetUpTextBox();
         }
-        else
-        {
-            textBox = GameObject.Find("CharacterTextBox");
-            characterImage = GameObject.Find("CharacterImage").GetComponent<Image>();
-            characterImage.sprite = characterSprite;
-        }
-        characterNameTMP = GameObject.Find("Name").GetComponent<TMP_Text>();
-        textTMP = GameObject.Find("Lines").GetComponent<TMP_Text>();
-    }
-
-    void Start()
-    {
-        // make sure text box is clear at the start
-        textTMP.text = "";
-
-        if (!usedElsewhere) textBox.SetActive(false);
     }
 
     void Update()
@@ -72,8 +57,12 @@ public class DialogueManager : MonoBehaviour
 
                 if (currentLine >= conversation.Count)
                 {
-                    textBox.SetActive(false);
-
+                    // reset UI
+                    canvasGroup.alpha = 0;
+                    currentLine = 0;
+                    textTMP.text = "";
+                    characterImage.sprite = null;
+                    
                     // Trigger the event when dialogue ends
                     OnDialogueEnd?.Invoke();
                 }
@@ -90,15 +79,35 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    private void SetUpTextBox()
+    {
+        if (!hasCharacter)
+        {
+            textBox = GameObject.Find("TextBox");
+        }
+        else
+        {
+            textBox = GameObject.Find("CharacterTextBox");
+            characterImage = GameObject.Find("CharacterImage").GetComponent<Image>();
+            characterImage.sprite = characterSprite;
+        }
+        characterNameTMP = GameObject.Find("Name").GetComponent<TMP_Text>();
+        textTMP = GameObject.Find("Lines").GetComponent<TMP_Text>();
+        textTMP.text = "";
+        canvasGroup = textBox.GetComponent<CanvasGroup>();
+    }
+            
      void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision != null)
         {
+            SetUpTextBox();
+
             currentLine = 0;
+            
+            canvasGroup.alpha = 1;
 
-            textBox.SetActive(true);
-
-            StartCoroutine(UpdateTextBox());
+            typewriterCoroutine = StartCoroutine(UpdateTextBox());
         }
     }
 
