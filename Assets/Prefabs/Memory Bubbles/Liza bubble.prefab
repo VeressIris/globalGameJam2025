@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1092626881111771117
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 17.796154
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.836482
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1265909768712181478, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[0].line
+      value: "They say the water remembers. It holds the echoes of those who entered
+        it with more fear than sense, those who mistook courage for recklessness\u2014until
+        it was too late."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[1].line
+      value: I was a diver. Not by nature, not by passion. I did not love the sea,
+        nor did I trust it. But I wanted to prove I could do it, to hear them say
+        I was brave. Strong. Capable.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[2].line
+      value: And yet, the water took me away.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[3].line
+      value: No one knows exactly how it happened. Some say my tank ran low, others
+        that a current dragged me under. But the truth? I panicked. I felt the weight
+        of the ocean pressing in, the silence swallowing my breath. My hands shook.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[4].line
+      value: "My mind screamed. Up, up, up\u2014where was up? My mask fogged, my
+        lungs burned, and suddenly, the surface was too far. I was lost in my own
+        fear, and the water made sure I never found my way back."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[5].line
+      value: "So if you go in, remember my story. Remember Liza Brothl. And for your
+        own sake\u2014don\u2019t let fear drown you before the water does."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[1].hasAudio
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[2].hasAudio
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[0].characterName
+      value: Liza Brothl
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[1].characterName
+      value: Liza Brothl
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[2].characterName
+      value: Liza Brothl
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[3].characterName
+      value: Liza Brothl
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[4].characterName
+      value: Liza Brothl
+      objectReference: {fileID: 0}
+    - target: {fileID: 1745472174379903475, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: conversation.Array.data[5].characterName
+      value: Liza Brothl
+      objectReference: {fileID: 0}
+    - target: {fileID: 6652677392059805956, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
+      propertyPath: m_Name
+      value: Liza bubble
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c822db646afcb1b4097ab42dc32f2baa, type: 3}
